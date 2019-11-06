@@ -3,6 +3,10 @@ import { Redirect } from 'react-router-dom'
 import '../CSS/Letras.css'
 import '../CSS/Register.css'
 
+
+
+var md5 = require('md5');
+
  
 class Register extends Component {
 
@@ -78,15 +82,24 @@ handleChange(event) {
 
                             <div className="row_register">
                                 <div className="column_register">
-                                    <div className="sparcing">
+                                    <div className="sparcing_register">
+                                    <img className="logo" src="./Logo.svg" ></img>
+                                    <h1>
+                                        HOLA
+                                    </h1>
    
                                          
                                     </div>
                                     
                                 </div>
                                 
-                                <div className="column">
-
+                                <div className="column_register2">
+                                        <form onSubmit={this.handleSubmit}>
+                                        
+                                        <input className="form_input_register" placeholder="Correo" type="text" value={this.state.username} name="username" onChange={this.handleChange}></input>
+                                        <input className="form_input_register" placeholder="Contraseña" type="password" value={this.state.password} name="password" onChange={this.handleChange}></input>
+                                        <input className="button_login" type="submit" value="Iniciar Sesión" />
+                                        </form>
                                 </div>
                             </div>
 
@@ -100,11 +113,6 @@ handleChange(event) {
 
                     </div>
                 )
-        }else{
-
-            return(
-                <Redirect to='/Login'/>
-            )
         }
     }
 }
