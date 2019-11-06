@@ -1,0 +1,43 @@
+.sparcing_text{
+    margin-left: 5%;
+
+}
+
+.sparcing_text h1{
+    margin-top: 5%;
+    color: gray;
+    margin-bottom: 3%;
+}
+
+.sparcing_text h2{
+
+    color: gray;
+    margin-bottom: 3%;
+    font-size: 160%;
+
+}
+.sparcing_text h2 span strong{
+    font-family: BeVietnam-Bold;
+    font-weight: bolder;
+}
+
+.round_info{
+    border-radius: 15px 15px 15px 15px;
+    background-color: #e0e4e6;
+}
+.round_info .row {
+    text-align: center;
+}
+.round_info .row .column{
+    text-align: center;
+}
+
+.process_scroll
+{
+    margin-top: 3%;
+    height: 40vh;
+    min-height: 40vh;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100.238" height="100.238" viewBox="0 0 100.238 100.238">
+  <defs>
+    <filter id="Elipse_49" x="0" y="0" width="100.238" height="100.238" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#002c3d"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_1269" data-name="Grupo 1269" transform="translate(-883 -2777.5)">
+    <g transform="matrix(1, 0, 0, 1, 883, 2777.5)" filter="url(#Elipse_49)">
+      <circle id="Elipse_49-2" data-name="Elipse 49" cx="41.119" cy="41.119" r="41.119" transform="translate(9 6)" fill="#002c3d"/>
+    </g>
+    <path id="Trazado_506" data-name="Trazado 506" d="M29.177,13.158H19.451a.572.572,0,0,1-.572-.572V2.861a2.861,2.861,0,0,0-5.721,0v9.726a.572.572,0,0,1-.572.572H2.861a2.861,2.861,0,0,0,0,5.721h9.726a.572.572,0,0,1,.572.572v9.726a2.861,2.861,0,1,0,5.721,0V19.451a.572.572,0,0,1,.572-.572h9.726a2.861,2.861,0,1,0,0-5.721Z" transform="translate(917.226 2808.727)" fill="#fff"/>
+  </g>
+</svg>
