@@ -76,8 +76,8 @@ handleChange(event) {
                        
 
 
-                            <div className="row">
-                                <div className="column">
+                            <div className="row_register">
+                                <div className="column_register">
                                     <div className="sparcing">
    
                                          

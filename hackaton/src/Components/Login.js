@@ -80,7 +80,7 @@ handleChange(event) {
                             <div className="row">
                                 <div className="column">
                                     <div className="sparcing">
-                                        <img className="logo" src="./logo.svg" ></img>
+                                        <img className="logo" src="./logo.png" ></img>
                                         <h1>
                                             <span className="salto_linea">Bienvenido</span> 
                                             <span className="salto_linea">a Scouta</span> 
@@ -104,7 +104,7 @@ handleChange(event) {
                                 
                                 <div className="column">
 
-                                <img className="image_left" src="./isotipo.svg"></img>
+                                <img className="image_left" src="./isotipo.png"></img>
                                 </div>
                             </div>
 
