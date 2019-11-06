@@ -80,16 +80,16 @@ handleChange(event) {
                             <div className="row">
                                 <div className="column">
                                     <div className="sparcing">
-                                        <img className="logo" src="./logo.png" ></img>
+                                        <img className="logo" src="./Logo.svg" ></img>
                                         <h1>
                                             <span className="salto_linea">Bienvenido</span> 
                                             <span className="salto_linea">a Scouta</span> 
                                             
                                         </h1>
                                         <h2>
-                                            <span className="salto_linea">Tus procesos,</span> 
-                                            <span className="salto_linea">Más digitales,</span>
-                                            <span className="salto_linea">Más rapido.</span> 
+                                            <span className="salto_linea">Visualiza.</span> 
+                                            <span className="salto_linea">Compara.</span>
+                                            <span className="salto_linea">Planea.</span> 
                                         </h2>
                                         <form onSubmit={this.handleSubmit}>
                                 
@@ -104,7 +104,7 @@ handleChange(event) {
                                 
                                 <div className="column">
 
-                                <img className="image_left" src="./isotipo.png"></img>
+                                <img className="image_left" src="./isotipo.svg"></img>
                                 </div>
                             </div>
 
