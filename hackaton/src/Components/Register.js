@@ -95,7 +95,7 @@ handleChange(event) {
                                 
                                 <div className="column_register2">
                                         <form onSubmit={this.handleSubmit}>
-                                        <h3>No. de identificación-NIT</h3>
+                                        <h3 className="form_title">No. de identificación-NIT</h3>
                                         <input className="form_input_register" placeholder="00000000000" type="text" value={this.state.username} name="username" onChange={this.handleChange}></input>
                                         <input className="form_input_register" placeholder="Nombre de la empresa" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
                                         <input className="form_input_register" placeholder="Nombre del representante legal" type="text" value={this.state.username} name="username" onChange={this.handleChange}></input>
