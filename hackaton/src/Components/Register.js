@@ -95,10 +95,17 @@ handleChange(event) {
                                 
                                 <div className="column_register2">
                                         <form onSubmit={this.handleSubmit}>
-                                        
-                                        <input className="form_input_register" placeholder="Correo" type="text" value={this.state.username} name="username" onChange={this.handleChange}></input>
-                                        <input className="form_input_register" placeholder="Contraseña" type="password" value={this.state.password} name="password" onChange={this.handleChange}></input>
+                                        <h3>No. de identificación-NIT</h3>
+                                        <input className="form_input_register" placeholder="00000000000" type="text" value={this.state.username} name="username" onChange={this.handleChange}></input>
+                                        <input className="form_input_register" placeholder="Nombre de la empresa" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
+                                        <input className="form_input_register" placeholder="Nombre del representante legal" type="text" value={this.state.username} name="username" onChange={this.handleChange}></input>
+                                        <input className="form_input_register" placeholder="Departamento" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
+                                        <input className="form_input_register" placeholder="Cluster" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
+                                        <input className="form_input_register" placeholder="Cluster" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
+                                        <input className="form_input_register" placeholder="Cluster" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
+
                                         <input className="button_login" type="submit" value="Iniciar Sesión" />
+
                                         </form>
                                 </div>
                             </div>

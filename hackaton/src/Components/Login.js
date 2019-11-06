@@ -92,15 +92,9 @@ handleChange(event) {
                                             <span className="salto_linea">Planea.</span> 
                                         </h2>
                                         <form onSubmit={this.handleSubmit}>
-                                        <h3>No. de identificación-NIT</h3>
-                                        <input className="form_input" placeholder="00000000000" type="text" value={this.state.username} name="username" onChange={this.handleChange}></input>
-                                        <input className="form_input" placeholder="Nombre de la empresa" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
-                                        <input className="form_input" placeholder="Nombre del representante legal" type="text" value={this.state.username} name="username" onChange={this.handleChange}></input>
-                                        <input className="form_input" placeholder="Departamento" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
-                                        <input className="form_input" placeholder="Cluster" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
-                                        <input className="form_input" placeholder="Cluster" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
-
-                                        <input className="button_login" type="submit" value="Iniciar Sesión" />
+                                            <input className="form_input" placeholder="Correo" type="text" value={this.state.username} name="username" onChange={this.handleChange}></input>
+                                            <input className="form_input" placeholder="Contraseña" type="password" value={this.state.password} name="password" onChange={this.handleChange}></input>
+                                            <input className="button_login" type="submit" value="Iniciar Sesión" />
                                         </form>
                                          <h3>
                                              ¿No tienes cuenta?,<a href="/Register">Registrate</a> 
