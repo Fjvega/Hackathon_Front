@@ -49,10 +49,6 @@ state={
 
 
 
-                 <img  style={{width:'35%',marginTop:'10%'}}src="./SVG/man.svg"></img>
-                 <h3>             
-                     Perfil
-                 </h3>
 
 
                  <img  src="./SVG/LogOut.svg"  onClick={() => this.props.change(4)}></img>
