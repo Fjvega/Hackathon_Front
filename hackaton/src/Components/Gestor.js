@@ -26,7 +26,6 @@ state={
 }
 
 changeIndex=(index)=>{
-    console.log(index)
     this.setState({indice:index})
   }
 handleChange(event) {

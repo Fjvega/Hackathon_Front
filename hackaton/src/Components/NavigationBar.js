@@ -55,7 +55,7 @@ state={
                  </h3>
 
 
-                 <img  src="./SVG/LogOut.svg"></img>
+                 <img  src="./SVG/LogOut.svg"  onClick={() => this.props.change(4)}></img>
                  <h3>             
                      Cerrar Sesión
                  </h3>
