@@ -17,58 +17,43 @@ constructor(props) {
 
 
 state={
-    username:'',password:'',visible:false,value:''
+    username:'',password:'',visible:false,value:'',index:0
 }
 
 
     render() 
     {   
-    
+ 
         return(
         <div class="navbar_background">
-            <div class="sparcing">
-                 <img class="logo" src="./logo.svg" ></img>
-                 <img  style={{marginTop:'20%'}}src="./SVG/Notifications.svg"></img>
-                 <h3>
-                     Notificaciones
-                 </h3>
+            <div class="sparcing_navbar">
+                 <img class="logo_navbar" src="./logo.svg" ></img>
 
-                 <img  style={{marginTop:'50%'}}src="./SVG/Home.svg"></img>
+                
+                 <img  style={{marginTop:'70%'}} src="./SVG/001-upload.svg"  onClick={() => this.props.change(1)}></img>
                  <h3>
-                     Inicio
-                 </h3>
-
-                 <img  src="./SVG/Check_Book.svg"></img>
-                 <h3>
-                     <span style={{display:'block'}}>
-                        Aprobaciones
-                     </span>
-                     <span style={{display:'block'}}>
-                        Pendientes
-                     </span>
-                     
+                     Subir archivos
                      
                  </h3>
 
-                 <img  src="./SVG/Group.svg"></img>
-                 <h3>             
-                     Colaboradores
-                 </h3>
-                 
-                 <img  src="./SVG/Box.svg"></img>
-                 <h3>             
-                     Modulos
+                 <img  src="./SVG/002-feelings.svg"  onClick={() => this.props.change(2)}></img>
+                 <h3>
+                     Analisis de Sentimientos
                  </h3>
 
-                 <img  style={{width:'35%',marginTop:'50%'}}src="./SVG/man.svg"></img>
+                 <img  src="./SVG/003-bar-chart.svg"  onClick={() => this.props.change(3)}></img>
+                 <h3>
+                     Estadisticas
+                     
+                 </h3>
+
+
+
+                 <img  style={{width:'35%',marginTop:'10%'}}src="./SVG/man.svg"></img>
                  <h3>             
                      Perfil
                  </h3>
 
-                 <img  src="./SVG/Settings.svg"></img>
-                 <h3>             
-                     Configuración
-                 </h3>
 
                  <img  src="./SVG/LogOut.svg"></img>
                  <h3>             

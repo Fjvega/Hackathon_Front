@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
 import '../CSS/Letras.css'
 import '../CSS/Register.css'
-
-
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 var md5 = require('md5');
 
@@ -11,7 +11,18 @@ var md5 = require('md5');
 class Register extends Component {
 
 
+componentDidMount()
+{
 
+    var json = require('../colombia.json'); //(with path)  
+    var lista =[]
+    for (let i = 0; i < json.length; i++) {
+         console.log(json[i].departamento);
+        lista.push(json[i].departamento)
+      }
+
+    this.setState({list:lista})
+}
 constructor(props) {
     super(props);
       
@@ -22,19 +33,18 @@ constructor(props) {
 
 
 state={
-    nit:'',nombreEmpresa:'',nombrePersona:'',departamento:'',celular:'',username:'',password:'',visible:false,value:''
+    nit:'',nombreEmpresa:'',nombrePersona:'',departamento:'',celular:'',username:'',password:'',visible:false,value:'',list:[],cluster:''
 }
 handleSubmit(event)
 {   
     event.preventDefault();
 
-    let data= JSON.stringify({'username':this.state.username,'password':md5(this.state.password)})
+    let data= JSON.stringify({'token':md5(this.state.email),'name':this.state.nombrePersona,'departamento':this.state.departamento,'email':this.state.email,'password':md5(this.state.password),'nit':this.state.nit,'representante':this.state.nombrePersona,'cluster':this.state.cluster,'cellphone':this.state.celular})
 
-    console.log(data)
-    this.setState({visible:true})
+    console.log(data.email)
     
-    fetch('http://127.0.0.1:5000/login', {
-        method: 'PUT',
+    fetch('http://35.193.232.165:5000/register', {
+        method: 'POST',
         body: data,
         headers:{
             'Access-Control-Allow-Origin': '*',
@@ -44,10 +54,15 @@ handleSubmit(event)
       .then((responseJson) => {
 
        
-        console.log(responseJson['data'])
-        this.setState({value:responseJson['data'].username},this.setState({visible:true}))
+        console.log(responseJson['Estado'])
 
-
+        if(responseJson['Estado']==='Success')
+        {
+            NotificationManager.success('Success message', 'Registro Exitoso');
+            this.setState({visible:true})
+        }else{
+            NotificationManager.error('Error message', 'Registro Fallido');
+        }
     
     }
     
@@ -74,7 +89,7 @@ handleChange(event) {
         if(this.state.visible==false)
         {
                 return(
-                    <div >
+                    <div>
 
                         <body>
                        
@@ -102,8 +117,14 @@ handleChange(event) {
                                                     <input className="form_input_register" placeholder="00000000000" type="text" value={this.state.nit} name="nit" onChange={this.handleChange}></input>
                                                     <input className="form_input_register" placeholder="Nombre de la empresa" type="text" value={this.state.nombreEmpresa} name="nombreEmpresa" onChange={this.handleChange}></input>
                                                     <input className="form_input_register" placeholder="Nombre del representante legal" type="text" value={this.state.nombrePersona} name="nombrePersona" onChange={this.handleChange}></input>
-                                                    <input className="form_input_register" placeholder="Departamento" type="text" value={this.state.departamento} name="departamento" onChange={this.handleChange}></input>
+                                                    <select className="form_input_register" id="selector" placeholder="Departamento" type="text" name="departamento" value={this.state.departamento} onChange={this.handleChange}>
+                                                        {this.state.list.map((h, i) => 
+                                                                (<option key={i} value={h}>{h}</option>))
+                                                            }
+                                                    </select>
                                                     <input className="form_input_register" placeholder="Celular/Telefono" type="text" value={this.state.celular} name="celular" onChange={this.handleChange}></input>
+                                                    <input className="form_input_register" placeholder="Cluster" type="text" value={this.state.cluster} name="cluster" onChange={this.handleChange}></input>
+
                                                 </div>
 
                                                 <div className="column_fields">
@@ -127,7 +148,13 @@ handleChange(event) {
 
 
                     </div>
+
                 )
+        }else{
+
+            return(
+                <Redirect to='/Login'/>
+            )
         }
     }
 }

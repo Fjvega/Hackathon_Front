@@ -3,17 +3,20 @@ import ReactDOM from 'react-dom'
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import Login from './Components/Login'
 import Register from './Components/Register'
+import Gestor from './Components/Gestor'
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 const routing = (
     <Router>
       <div>
-        <Route exact path="/" component={Login} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/Register" component={Register} />
+          <Route exact path="/" component={Login} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/Register" component={Register} />
+          <Route exact path="/Gestor" component={Gestor} />
 
+          <NotificationContainer/>
       </div>
     </Router>
   )

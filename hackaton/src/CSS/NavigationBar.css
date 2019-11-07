@@ -1,32 +1,35 @@
 .navbar_background{
     background-color:#002C3D;
+    height: 100vh;
 
 }
 
-.logo{
-    width: 80%;
-    margin-top: 11%;
+.logo_navbar{
+    width: 80% !important;
+    padding-top: 10%;
 
 }
 
-.sparcing{
+.sparcing_navbar{
     margin-left: 5%;
     text-align: center;
     align-content: center;
 }
 
-.sparcing img{
+.sparcing_navbar img{
 
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10%;
+    width: 30%;
 }
 
-.sparcing h3{
+.sparcing_navbar h3{
     font-family: 'BeVietnam';
     color:white;
     font-size: 90%;
+    margin-bottom: 20%;
 }
 
 .salto_linea{

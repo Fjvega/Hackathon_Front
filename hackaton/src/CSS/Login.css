@@ -30,7 +30,7 @@ html{
 .logo{
     width: 30%;
     margin-top:2%;
-    margin-bottom: -2%;
+    margin-bottom: 3%;
 
 }
 h1{
@@ -51,6 +51,14 @@ h3{
     color:white;
     font-size: 110%;
     margin-bottom: 2%;
+}
+
+h3 a {
+
+    font-family: 'BeVietnam-Thin';
+    color:white;
+    font-size: 110%;
+    text-decoration: none;
 }
 .salto_linea{
     display: block;

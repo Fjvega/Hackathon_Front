@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
 import '../CSS/Letras.css'
 import '../CSS/Login.css'
-
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 var md5 = require('md5');
  
 class Login extends Component {
@@ -25,12 +26,11 @@ handleSubmit(event)
 {   
     event.preventDefault();
 
-    let data= JSON.stringify({'username':this.state.username,'password':md5(this.state.password)})
+    let data= JSON.stringify({'email':this.state.username,'password':md5(this.state.password)})
 
     console.log(data)
-    this.setState({visible:true})
     
-    fetch('http://127.0.0.1:5000/login', {
+    fetch('http://35.193.232.165:5000/login', {
         method: 'PUT',
         body: data,
         headers:{
@@ -41,9 +41,13 @@ handleSubmit(event)
       .then((responseJson) => {
 
        
-        console.log(responseJson['data'])
-        this.setState({value:responseJson['data'].username},this.setState({visible:true}))
 
+        if(responseJson['Estado']==='Success')
+        {
+            this.setState({visible:true})
+        }else{
+            NotificationManager.error('Error message', 'Login fallido');
+        }
 
     
     }
@@ -71,7 +75,7 @@ handleChange(event) {
         if(this.state.visible==false)
         {
                 return(
-                    <div >
+                    <div>
 
                         <body>
                        
@@ -97,7 +101,7 @@ handleChange(event) {
                                             <input className="button_login" type="submit" value="Iniciar Sesión" />
                                         </form>
                                          <h3>
-                                             ¿No tienes cuenta?,<a href="/Register">Registrate</a> 
+                                             ¿No tienes cuenta?,<a href="/Register"> Registrate</a> 
                                          </h3>
                                     </div>
                                     
@@ -116,13 +120,14 @@ handleChange(event) {
                         
                         
 
-
                     </div>
+
+
                 )
         }else{
 
             return(
-                <Redirect to='/Register'/>
+                <Redirect to='/Gestor'/>
             )
         }
     }
