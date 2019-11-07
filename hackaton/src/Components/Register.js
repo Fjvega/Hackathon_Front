@@ -22,7 +22,7 @@ constructor(props) {
 
 
 state={
-    username:'',password:'',visible:false,value:''
+    nit:'',nombreEmpresa:'',nombrePersona:'',departamento:'',celular:'',username:'',password:'',visible:false,value:''
 }
 handleSubmit(event)
 {   
@@ -83,9 +83,9 @@ handleChange(event) {
                             <div className="row_register">
                                 <div className="column_register">
                                     <div className="sparcing_register">
-                                    <img className="logo" src="./Logo.svg" ></img>
+                                    <img className="logo_register" src="./Logo.svg" ></img>
                                     <h1>
-                                        HOLA
+                                        Registro de empresa
                                     </h1>
    
                                          
@@ -94,19 +94,27 @@ handleChange(event) {
                                 </div>
                                 
                                 <div className="column_register2">
+                                    <div className="sparcing_register">
                                         <form onSubmit={this.handleSubmit}>
-                                        <h3 className="form_title">No. de identificación-NIT</h3>
-                                        <input className="form_input_register" placeholder="00000000000" type="text" value={this.state.username} name="username" onChange={this.handleChange}></input>
-                                        <input className="form_input_register" placeholder="Nombre de la empresa" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
-                                        <input className="form_input_register" placeholder="Nombre del representante legal" type="text" value={this.state.username} name="username" onChange={this.handleChange}></input>
-                                        <input className="form_input_register" placeholder="Departamento" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
-                                        <input className="form_input_register" placeholder="Cluster" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
-                                        <input className="form_input_register" placeholder="Cluster" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
-                                        <input className="form_input_register" placeholder="Cluster" type="text" value={this.state.password} name="password" onChange={this.handleChange}></input>
+                                            <div className="row_register">
+                                                <div className="column_fields">
+                                                    <h3 className="form_title">No. de identificación-NIT</h3>
+                                                    <input className="form_input_register" placeholder="00000000000" type="text" value={this.state.nit} name="nit" onChange={this.handleChange}></input>
+                                                    <input className="form_input_register" placeholder="Nombre de la empresa" type="text" value={this.state.nombreEmpresa} name="nombreEmpresa" onChange={this.handleChange}></input>
+                                                    <input className="form_input_register" placeholder="Nombre del representante legal" type="text" value={this.state.nombrePersona} name="nombrePersona" onChange={this.handleChange}></input>
+                                                    <input className="form_input_register" placeholder="Departamento" type="text" value={this.state.departamento} name="departamento" onChange={this.handleChange}></input>
+                                                    <input className="form_input_register" placeholder="Celular/Telefono" type="text" value={this.state.celular} name="celular" onChange={this.handleChange}></input>
+                                                </div>
 
-                                        <input className="button_login" type="submit" value="Iniciar Sesión" />
-
+                                                <div className="column_fields">
+                                                    <input  style={{marginTop:"9%"}}className="form_input_register" placeholder="Email" type="text" value={this.state.email} name="email" onChange={this.handleChange}></input>
+                                                    <input className="form_input_register" placeholder="Contraseña" type="password" value={this.state.password} name="password" onChange={this.handleChange}></input>
+                                                </div>
+                                            </div>
+                                            
+                                                 <input className="button_register" type="submit" value="Registro" />
                                         </form>
+                                    </div>
                                 </div>
                             </div>
 
